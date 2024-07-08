@@ -1,20 +1,20 @@
 {
   "name": "csharp",
-  "publisher": "muhammad-sammy",
+  "publisher": "techpizza",
   "version": "2.34.12",
-  "description": "Free/Libre C# support for vscode-compatible editors.",
+  "description": "Libre C# support for vscode-compatible editors.",
   "displayName": "C#",
-  "author": "Muhammad Sammy",
+  "author": "TechPizza",
   "license": "SEE LICENSE IN RuntimeLicenses/license.txt",
-  "qna": "https://github.com/muhammadsammy/free-vscode-csharp/issues",
+  "qna": "https://github.com/TechPizzaDev/vscode-csharp/issues",
   "icon": "images/csharpIcon.png",
   "preview": false,
   "bugs": {
-    "url": "https://github.com/muhammadsammy/free-vscode-csharp/issues"
+    "url": "https://github.com/TechPizzaDev/vscode-csharp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/muhammadsammy/free-vscode-csharp.git"
+    "url": "https://github.com/TechPizzaDev/vscode-csharp.git"
   },
   "categories": [
     "Debuggers",

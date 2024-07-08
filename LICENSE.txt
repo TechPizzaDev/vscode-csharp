@@ -1,5 +1,6 @@
 MIT License
 
+Copyright (c) TechPizza and Contributors
 Copyright (c) Muhammad Sammy and Contributors for Current Work and Modifications in This Fork.
 Original Work Copyright (c) .NET Foundation and Contributors
 All Rights Reserved

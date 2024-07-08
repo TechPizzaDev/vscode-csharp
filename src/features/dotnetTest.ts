@@ -35,6 +35,7 @@ import Disposable from '../disposable';
 import CompositeDisposable from '../compositeDisposable';
 import { LanguageMiddlewareFeature } from '../omnisharp/languageMiddlewareFeature';
 import { commonOptions } from '../shared/options';
+import { CSharpExtensionId } from '../constants/csharpExtensionId';
 
 const TelemetryReportingDelay = 2 * 60 * 1000; // two minutes
 
@@ -694,7 +695,7 @@ class DebugEventListener {
             this._pipePath = '\\\\.\\pipe\\Microsoft.VSCode.CSharpExt.TestDebugEvents' + process.pid;
         } else {
             const tmpdir = utils.getUnixTempDirectory();
-            this._pipePath = path.join(tmpdir, 'muhammad-sammy.csharp-tde-' + process.pid);
+            this._pipePath = path.join(tmpdir, CSharpExtensionId + '-tde-' + process.pid);
         }
     }
 

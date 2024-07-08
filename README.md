@@ -7,18 +7,18 @@ The debugger included in the official C# extension is [proprietary](https://aka.
 ### Get the VSIX file
 
 - #### Prebuilt binaries
-    - This extension is published at [Open VSX](https://open-vsx.org/extension/muhammad-sammy/csharp).
+    - WIP: This extension is published at [Open VSX](https://open-vsx.org/extension/techpizza/csharp).
 
-    - Download the vsix file from the [latest release](https://github.com/muhammadsammy/free-vscode-csharp/releases/latest) assests.
+    - Download the vsix file from the [latest release](https://github.com/techpizza/vscode-csharp/releases/latest) assests.
 
-    - Download the extension vsix from [latest commit CI](https://github.com/muhammadsammy/free-vscode-csharp/actions/workflows/ci.yml).
+    - Download the extension vsix from [latest commit CI](https://github.com/techpizza/vscode-csharp/actions/workflows/ci.yml).
 
 - #### Build from source
 
     ```bash
-    git clone https://github.com/muhammadsammy/free-vscode-csharp.git
+    git clone https://github.com/TechPizzaDev/vscode-csharp.git
 
-    cd free-vscode-csharp
+    cd vscode-csharp
 
     # Make sure you have NodeJS (https://nodejs.org) installed.
 

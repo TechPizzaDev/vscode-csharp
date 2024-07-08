@@ -9,6 +9,7 @@ import { CSharpExtensionExports } from '../../src/csharpExtensionExports';
 import { existsSync } from 'fs';
 import { ServerStateChange } from '../../src/lsptoolshost/serverStateChange';
 import testAssetWorkspace from './testAssets/testAssetWorkspace';
+import { CSharpExtensionId } from '../../src/constants/csharpExtensionId';
 
 export async function activateCSharpExtension(): Promise<void> {
     // Ensure the dependent extension exists - when launching via F5 launch.json we can't install the extension prior to opening vscode.
@@ -20,9 +21,9 @@ export async function activateCSharpExtension(): Promise<void> {
         await vscode.commands.executeCommand('workbench.action.reloadWindow');
     }
 
-    const csharpExtension = vscode.extensions.getExtension<CSharpExtensionExports>('muhammad-sammy.csharp');
+    const csharpExtension = vscode.extensions.getExtension<CSharpExtensionExports>(CSharpExtensionId);
     if (!csharpExtension) {
-        throw new Error('Failed to find installation of muhammad-sammy.csharp');
+        throw new Error(`Failed to find installation of '${CSharpExtensionId}'`);
     }
 
     // Run a restore manually to make sure the project is up to date since we don't have automatic restore.
@@ -38,7 +39,7 @@ export async function activateCSharpExtension(): Promise<void> {
     // Explicitly await the extension activation even if completed so that we capture any errors it threw during activation.
     await csharpExtension.activate();
     await csharpExtension.exports.initializationFinished();
-    console.log('muhammad-sammy.csharp activated');
+    console.log(`${CSharpExtensionId} activated`);
     console.log(`Extension Log Directory: ${csharpExtension.exports.logDirectory}`);
 
     if (shouldRestart) {
